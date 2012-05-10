@@ -2,10 +2,10 @@
   , Client = require ( 'mysql' ).Client;
 
 var client = new Client ( );
-    client.user = 'simonren_ndvnt';
-    client.password = 'nodoovent';
-    client.host = 'simon-renoult.com';
-    client.port = '3306';
+    client.user = '';
+    client.password = '';
+    client.host = '';
+    client.port = '';
     
 http.createServer ( function ( req, res ) {
   res.writeHead( 200, {'Content-Type': 'text/plain'} );
