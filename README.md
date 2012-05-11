@@ -11,11 +11,11 @@ This API is an abstraction layer allowing developper to handle Nodoovent databas
 
 #### node.js :
 
-	See [here](https://github.com/joyent/node/wiki/Installation) (Official node.js wiki)
+See [here](https://github.com/joyent/node/wiki/Installation) (Official node.js wiki)
 
 #### Optional - node.js debugger (development version only) :
 
-	See [node-inspector](https://github.com/dannycoates/node-inspector/wiki/Getting-Started---from-scratch) (Officiel node-inspector wiki)
+See [node-inspector](https://github.com/dannycoates/node-inspector/wiki/Getting-Started---from-scratch) (Officiel node-inspector wiki)
 
 #### Howto :
 
