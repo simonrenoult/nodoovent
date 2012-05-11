@@ -3,13 +3,11 @@
 Nodoovent application core.
 This API is an abstraction layer allowing developper to handle Nodoovent database.
 
-- - -
-### Requirements :
+## Requirements :
 
 * node.js >= 0.6.17
 
-- - -
-### Installation instructions :
+## Installation instructions :
 
 #### node.js :
 
@@ -19,15 +17,14 @@ See [here](https://github.com/joyent/node/wiki/Installation) (Official node.js w
 
 See [node-inspector](https://github.com/dannycoates/node-inspector/wiki/Getting-Started---from-scratch) (Officiel node-inspector wiki)
 
-- - -
-### Howto :
+## Howto :
 
 ... launch the server ?
 
 With a terminal, go to your application repository and type "node app.js".
 
-- - -
-### Documentation :
+
+## Documentation :
 
 * Project : 
 	* [todoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
