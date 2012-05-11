@@ -36,6 +36,7 @@ This API is an abstraction layer allowing developper to handle Nodoovent databas
 
 * Project : 
 	* [todoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
+	* [todoovent diagrams](http://simon-renoult.com/todoovent/)
 * About node.js : 
 	* [Official node.js doc](http://nodejs.org/api/)
 	* [Node.js tutorial (en) ](http://www.nodebeginner.org/)
