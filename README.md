@@ -27,8 +27,9 @@ See [node-inspector](https://github.com/dannycoates/node-inspector/wiki/Getting-
 * Project : 
 	* [todoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
 	* [todoovent diagrams](http://simon-renoult.com/todoovent/)
-* About node.js : 
+* Node.js : 
 	* [Official node.js doc](http://nodejs.org/api/)
+	* [Links on node.js Github repo](https://github.com/joyent/node#resources-for-newcomers)
 	* [Node.js tutorial (en) ](http://www.nodebeginner.org/)
 	* [Node.js tutorial (fr) ](http://nodejs.developpez.com/tutoriels/javascript/node-js-livre-debutant/)
 	* [Howtonode - Node.js Planet](http://howtonode.org/)
