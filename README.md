@@ -31,3 +31,15 @@ This API is an abstraction layer allowing developper to handle Nodoovent databas
 
 ... launch the server ?
 -> With a terminal, go to your application repository and type "node app.js".
+
+### Documentation :
+
+* Project : 
+	* [todoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
+* About node.js : 
+	* [Official node.js doc](http://nodejs.org/api/)
+	* [Node.js tutorial (en) ](http://www.nodebeginner.org/)
+	* [Node.js tutorial (fr) ](http://nodejs.developpez.com/tutoriels/javascript/node-js-livre-debutant/)
+	* [Howtonode - Node.js Planet](http://howtonode.org/)
+	* [MySQL and Node.js](http://www.giantflyingsaucer.com/blog/?p=2596)
+	* [Many links on this post](http://stackoverflow.com/a/5511507)
