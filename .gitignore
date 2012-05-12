@@ -1,3 +1,6 @@
 # Temporary file directory
 tmp/
 *~
+.projects
+.settings
+.geany
