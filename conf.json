@@ -1,0 +1,12 @@
+{
+    "api": {
+        "address":"127.0.0.1",
+        "port":1337
+    },
+    "db": {
+        "address":"simon-renoult.com",
+        "port":3306,
+        "username":"simonren_ndvnt",
+        "password":"nodoovent"
+    }
+}
