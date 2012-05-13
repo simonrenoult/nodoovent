@@ -4,9 +4,10 @@
         "port":1337
     },
     "db": {
-        "address":"simon-renoult.com",
+        "host":"simon-renoult.com",
         "port":3306,
-        "username":"simonren_ndvnt",
-        "password":"nodoovent"
+        "user":"simonren_ndvnt",
+        "password":"nodoovent",
+        "dbName":"simonren_nodoovent"
     }
 }
