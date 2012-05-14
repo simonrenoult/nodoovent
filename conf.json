@@ -1,13 +1,14 @@
 {
-    "api": {
-        "address":"127.0.0.1",
-        "port":1337
-    },
-    "db": {
-        "host":"simon-renoult.com",
-        "port":3306,
-        "user":"simonren_ndvnt",
-        "password":"nodoovent",
-        "dbName":"simonren_nodoovent"
-    }
+	"api": {
+		"address": "127.0.0.1",
+		"port": 1337
+	},
+	"db": {
+		"host": "simon-renoult.com",
+		"port": 3306,
+		"type": "mysql",
+		"user": "simonren_ndvnt",
+		"password": "nodoovent",
+		"dbName": "simonren_nodoovent"
+	}
 }
