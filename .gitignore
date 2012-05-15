@@ -6,3 +6,4 @@ tmp/
 *.geany
 docs
 /nbproject/private/
+/node_modules/.bin/
