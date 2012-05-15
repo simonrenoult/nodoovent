@@ -4,11 +4,11 @@
 		"port": 1337
 	},
 	"db": {
-		"host": "simon-renoult.com",
+		"host": "127.0.0.1",
 		"port": 3306,
 		"type": "mysql",
-		"user": "simonren_ndvnt",
+		"user": "nodoovent",
 		"password": "nodoovent",
-		"dbName": "simonren_nodoovent"
+		"dbName": "nodoovent"
 	}
 }
