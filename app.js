@@ -6,7 +6,7 @@
  */
 var appConf = require ( './lib/config.js' ) ( './conf.json' )
   , orm = require ( 'orm' )
-  , db = require ( './lib/db/index.js' ) ( orm, appConf.db )
+  , db = require ( './lib/db/_index.js' ) ( orm, appConf.db )
   , handler = require ( './lib/handler.js' ) ( db )
   , router = require ( './lib/router.js' )
   , server = require ( './lib/server.js' ) ( router, handler );

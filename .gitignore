@@ -5,3 +5,4 @@ tmp/
 .settings
 *.geany
 docs
+/nbproject/private/
