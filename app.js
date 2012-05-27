@@ -1,8 +1,6 @@
 /*
  * Require the node modules.
- * http is a native nodejs module.
- * orm is installed from Node Package Manager (npm),
- * already present in node_modules folder.
+ * orm is installed from npm, already present in node_modules folder.
  */
 var orm = require ( 'orm' )
   , conf = require ( './lib/config.js' ) ( './conf.json' )
@@ -14,6 +12,10 @@ var orm = require ( 'orm' )
 /**
  * Connect the orm module to the database.
  * If connection is successful, initialize the models and create a server.
+ *
+ * @param conf {Object} Configuration file object.
+ * @param orm {Object} Orm module.
+ * @param callback {Function} Called if db connection succeeds.
  */
 models.connectOrm ( conf, orm, function ( dbConnection ) {
     models.initialize ( dbConnection );
