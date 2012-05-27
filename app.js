@@ -4,33 +4,23 @@
  * orm is installed from Node Package Manager (npm),
  * already present in node_modules folder.
  */
-var http = require ( 'http' )
-  , orm = require ( 'orm' )
+var orm = require ( 'orm' )
   , conf = require ( './lib/config.js' ) ( './conf.json' )
-  , models = require ( './lib/models.js' )
-  , server = require ( './lib/server.js' )
-  , router = require ( './lib/routes/_index.js' )
-  , handler = require ( './lib/handler.js' );
+  , models = require ( './lib/models' )
+  , router = require ( './lib/routes' )
+  , handler = require ( './lib/handler.js' )
+  , server = require ( './lib/server.js' );
 
-/*
- * Connect orm to db
+/**
+ * Connect the orm module to the database.
+ * If connection is successful, initialize the models and create a server.
  */
+models.connectOrm ( conf, orm, function ( dbConnection ) {
+    models.initialize ( dbConnection );
+    server
+        .create ( dbConnection, router, handler )
+        .listen ( conf.api.port, conf.api.address );
 
-var connectionAddress =  conf.db.type + '://'
-    + conf.db.user + ':' + conf.db.password
-    + '@' + conf.db.host + ':' + conf.db.port + '/' + conf.db.dbName;
-
-orm.connect ( connectionAddress, function ( success, db ) {
-    if ( !success ) {
-        console.log ( 'Could not connect to database.' );
-    } else {
-        console.log ( 'Application connected to database.' );
-        console.log ( connectionAddress );
-
-        models.initialize ( db );
-
-        server.create ( db, router, handler ).listen ( conf.api.port, conf.api.address );
-    }
+    console.log ( 'API running at http://'
+            + conf.api.address + ':' + conf.api.port + '.' );
 } );
-
-console.log ( 'Server running at http://' + conf.api.address + ':' + conf.api.port + '.');
