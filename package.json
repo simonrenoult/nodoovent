@@ -1,0 +1,12 @@
+{
+    "name": "nodoovent-api"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "orm": ">=0.1.8-10"
+    , "mysql": ">=0.9.6"
+  },
+  "engines": {
+    "node": ">=0.6.x"
+  }
+}
