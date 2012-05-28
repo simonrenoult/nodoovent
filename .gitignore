@@ -5,5 +5,5 @@ tmp/
 .settings
 *.geany
 docs
-/nbproject/private/
-/node_modules/.bin/
+nbproject/private/
+node_modules
