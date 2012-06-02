@@ -10,7 +10,7 @@
 			"type": "mysql",
 			"user": "nodoovent",
 			"password": "nodoovent",
-			"dbName": "nodoovent"		
+			"dbName": "nodoovent"
 		},
 		"remote": {
 			"host": "simon-renoult.com",
