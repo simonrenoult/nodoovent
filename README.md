@@ -1,6 +1,6 @@
 # Nodoovent-api
 
-Nodoovent application core.
+Nodoovent application core (aka API).
 This API is an abstraction layer allowing developper to handle Nodoovent database.
 
 ## Requirements
