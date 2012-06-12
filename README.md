@@ -1,7 +1,7 @@
 # Nodoovent-api
 
 Nodoovent application core (aka API).
-This API is an abstraction layer allowing developper to handle Nodoovent database.
+This is an abstraction layer allowing developper to handle Nodoovent database.
 
 ## Requirements
 * node.js >= 0.6.17
