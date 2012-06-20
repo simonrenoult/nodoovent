@@ -15,13 +15,20 @@ var orm = require ( 'orm' )
  *
  * @param conf {Object} Configuration file object.
  * @param orm {Object} Orm module.
- * @param callback {Function} Called if db connection succeeds.
+ * @param {Function} Called if db connection succeeds.
  */
 models.connectOrm ( conf, orm, function ( dbConnection ) {
     models.initialize ( dbConnection );
-    server
-        .create ( dbConnection, router, handler )
-        .listen ( conf.api.port, conf.api.address );
+    
+    // Create an instance of the HTTP server.
+
+    server.create ( conf.api, function ( req, res ) {
+        // Execute the router function each time the server is requested.
+        router ( req, handler, models._models, function ( result ) {
+            res.writeHead ( result.code, { "Content-Type": "application/json" } );
+            res.end ( JSON.stringify ( result.content ) );
+        } ); 
+    } );
 
     console.log ( 'API running at http://'
             + conf.api.address + ':' + conf.api.port + '.' );
