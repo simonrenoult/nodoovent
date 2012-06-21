@@ -3,6 +3,22 @@
 		"address": "127.0.0.1",
 		"port": 1337
 	},
+	"routes": {
+		"elements": [
+			"^\/elements$",
+			"^\/elements\/([0-9]+)$"
+		],
+		"authors": [
+			"^/authors$",
+			"^\/authors\/([0-9]+)$",
+			"^\/authors\/([A-Za-z0-9.-_]+)$"
+		],
+		"tags": [
+			"^/tags$",
+			"^\/tags\/([0-9]+)$",
+			"^\/tags\/([A-Za-z0-9.-_]+)$"
+		]
+	},
 	"db": {
 		"local": {
 			"host": "127.0.0.1",

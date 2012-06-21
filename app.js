@@ -19,12 +19,11 @@ var orm = require ( 'orm' )
  */
 models.connectOrm ( conf, orm, function ( dbConnection ) {
     models.initialize ( dbConnection );
-    
-    // Create an instance of the HTTP server.
 
+    // Create an instance of the HTTP server.
     server.create ( conf.api, function ( req, res ) {
         // Execute the router function each time the server is requested.
-        router ( req, handler, models._models, function ( result ) {
+        router ( conf.routes, req, handler, models._models, function ( result ) {
             res.writeHead ( result.code, { "Content-Type": "application/json" } );
             res.end ( JSON.stringify ( result.content ) );
         } ); 
