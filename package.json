@@ -3,7 +3,7 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "orm": ">=0.1.8-10"
+      "sequelize": ">=1.3.x"
     , "mysql": ">=0.9.6"
   },
   "engines": {

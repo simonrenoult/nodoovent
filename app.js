@@ -2,7 +2,7 @@
  * Require the node modules.
  * orm is installed from npm, already present in node_modules folder.
  */
-var orm = require ( 'orm' )
+var sequelize = require ( 'sequelize' )
   , conf = require ( './lib/config.js' ) ( './conf.json' )
   , models = require ( './lib/models' )
   , router = require ( './lib/routes' )
@@ -17,7 +17,7 @@ var orm = require ( 'orm' )
  * @param orm {Object} Orm module.
  * @param {Function} Called if db connection succeeds.
  */
-models.connectOrm ( conf, orm, function ( dbConnection ) {
+models.connectOrm ( conf, sequelize, function ( dbConnection ) {
     models.initialize ( dbConnection );
 
     // Create an instance of the HTTP server.

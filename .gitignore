@@ -2,8 +2,9 @@
 tmp/
 *~
 .projects
+.project
 .settings
 *.geany
 docs
-nbproject/private/
+nbproject/
 node_modules
