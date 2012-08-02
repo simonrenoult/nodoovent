@@ -18,12 +18,12 @@ var sequelize = require ( 'sequelize' )
  * @param {Function} Called if db connection succeeds.
  */
 models.connectOrm ( conf, sequelize, function ( dbConnection ) {
-    models.initialize ( dbConnection );
-
+    var dbObjects = models.initialize ( dbConnection );
+    
     // Create an instance of the HTTP server.
     server.create ( conf.api, function ( req, res ) {
         // Execute the router function each time the server is requested.
-        router ( conf.routes, req, handler, models._models, function ( result ) {
+        router ( conf.routes, req, handler, dbObjects, function ( result ) {
             res.writeHead ( result.code, { "Content-Type": "application/json" } );
             res.end ( JSON.stringify ( result.content ) );
         } ); 
