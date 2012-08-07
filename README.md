@@ -3,11 +3,15 @@
 Nodoovent application core (aka A.P.I.).
 This is an abstraction layer allowing developper to handle Nodoovent database.
 
+## Contribution
+If you want to contribute, please respect the code style currently in use (mostly like jQuery code style)
+and make sure your code is correctly commented.
+
 ## Requirements
 * node.js >= 0.6.17
 
 ## Installation instructions
-* node.js : See [here](https://github.com/joyent/node/wiki/Installation) (Official node.js wiki)
+* Node.js : See [here](https://github.com/joyent/node/wiki/Installation) (Official node.js wiki)
 * Optional - node.js debugger (development version only) : See [node-inspector](https://github.com/dannycoates/node-inspector/wiki/Getting-Started---from-scratch) (Official node-inspector wiki)
 
 
@@ -16,8 +20,8 @@ This is an abstraction layer allowing developper to handle Nodoovent database.
 
 ## Documentation
 * Project : 
-	* [todoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
-	* [todoovent diagrams](http://simon-renoult.com/todoovent/)
+	* [Nodoovent wiki](https://github.com/g4llic4/nodoovent/wiki)
+	* [Nodoovent diagrams](http://simon-renoult.com/todoovent/)
 * Node.js : 
 	* [Official node.js doc](http://nodejs.org/api/)
 	* [Links on node.js Github repo](https://github.com/joyent/node#resources-for-newcomers)
