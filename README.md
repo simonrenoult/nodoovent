@@ -1,5 +1,4 @@
 # Nodoovent-api
-
 Nodoovent application core (aka A.P.I.).
 This is an abstraction layer allowing developper to handle Nodoovent database.
 
