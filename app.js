@@ -14,7 +14,7 @@ var sequelize = require ( 'sequelize' )
  * If connection is successful, initialize the models and create a server.
  *
  * @param conf {Object} Configuration file object.
- * @param orm {Object} Orm module.
+ * @param sequelize {Object} Orm module.
  * @param {Function} Called if db connection succeeds.
  */
 models.connectOrm ( conf, sequelize, function ( dbConnection ) {
