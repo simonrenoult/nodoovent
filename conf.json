@@ -3,10 +3,10 @@
 		"address": "127.0.0.1",
 		"port": 1337
 	},
-	"routes": {
+	"resources" : {
 		"elements": [
-			"^\/elements$",
-			"^\/elements\/([0-9]+)$"
+			{ "^\/elements$" : ["GET", "DELETE"] },
+			{ "^\/elements\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
 		],
 		"authors": [
 			"^/authors$",
@@ -21,6 +21,7 @@
 	},
 	"db": {
 		"isRemote": false,
+		"encoding": "utf8",
 		"local": {
 			"host": "127.0.0.1",
 			"port": 3306,
