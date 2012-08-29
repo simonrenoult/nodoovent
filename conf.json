@@ -20,6 +20,10 @@
 			{ "^/tags$" : [ "GET", "DELETE" ] },
 			{ "^\/tags\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
 			{ "^\/tags\/([A-Za-z0-9-]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+		],
+		"status": [
+			{ "^\/status$" : [ "GET", "DELETE" ] },
+			{ "^\/status\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
 		]
 	},
 	"db": {
