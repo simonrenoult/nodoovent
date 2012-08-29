@@ -2,6 +2,7 @@ var assert = require ( 'assert' );
 
 module.exports = function ( model, handler ) {
 	console.log ( "-- > Elements." );
+	console.log ( "> Through ID." );
 	
 	var testElement = {
 		id : 666,

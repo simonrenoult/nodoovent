@@ -55,7 +55,8 @@ function testThroughMap ( model, handler ) {
 		id : 1337,
 		use_name : "TestUser1337",
 		use_password : "password",
-	};
+	}
+	  , newTestUserName = "TestUser1337_Update"
 
 	// Try to read a non-existent user.
 	handler.findOneByMap ( model, { use_name : testUser.use_name }, function ( results ) {
@@ -75,17 +76,17 @@ function testThroughMap ( model, handler ) {
 	handler.updateOneByMap ( false, model, { use_name : testUser.use_name }, function ( results ) {
 		
 		// Read the previously updated user.
-		handler.findOneByMap ( model, { use_name : "TestUser1337_Update" }, function ( results ) {
-			assert.equal ( results.message.content.use_name, "TestUser1337_Update", "Update in testing session." );
+		handler.findOneByMap ( model, { use_name : newTestUserName }, function ( results ) {
+			assert.equal ( results.message.content.use_name, newTestUserName, "Update in testing session." );
 		} );
 
 		// Delete the previously read user.
-		handler.delOneByMap ( model, { use_name : "TestUser1337_Update" }, function ( results ) {
+		handler.delOneByMap ( model, { use_name : newTestUserName }, function ( results ) {
 			
 			// Read the previously deleted user.
-			handler.findOneByMap ( model, { use_name : "TestUser1337_Update" }, function ( results ) {
+			handler.findOneByMap ( model, { use_name : newTestUserName }, function ( results ) {
 				assert.equal ( results.message.content, null );
 			} );
 		} );
-	}, JSON.stringify ( { use_name : "TestUser1337_Update" } ) );
+	}, JSON.stringify ( { use_name : newTestUserName } ) );
 }
