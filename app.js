@@ -41,7 +41,9 @@ models.connectOrm ( conf, Sequelize, function ( sequelize ) {
 	} else {
 		// Wait 500ms to be sure the shell is free.
 		setTimeout ( function ( ) {
-			var elements = require ( __dirname + '/tests/elements.tests.js' ) ( conf, modelsObject.elements, handler );
+			console.log ( "\nTesting session is processing..." );
+			// Start tests.
+			require ( __dirname + '/tests/elements.tests.js' ) ( conf, modelsObject.elements, handler );
 		}, 500 );
 	}
 	
