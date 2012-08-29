@@ -35,8 +35,7 @@ models.connectOrm ( conf, Sequelize, function ( sequelize ) {
 		server.create ( conf.api, function ( req, res ) {
 		    // Execute the router function each time the server is requested.
 		    router ( conf.resources, req, handler, modelsObject, function ( result ) {
-		        res.writeHead ( result.code, { "Content-Type": "application/json" } );
-		        res.end ( JSON.stringify ( result.message ) );
+		    	handler.respond ( res, result );
 		    } );
 		} );
 	} else {
