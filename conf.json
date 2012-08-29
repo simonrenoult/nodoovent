@@ -8,22 +8,22 @@
 	},
 	"resources" : {
 		"elements": [
-			{ "^\/elements$" : [ "GET", "DELETE" ] },
-			{ "^\/elements\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+			{ "^\/elements\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/elements\/([0-9]+)$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"users": [
-			{ "^/users$" : [ "GET", "DELETE" ] },
-			{ "^\/users\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
-			{ "^\/users\/([A-Za-z0-9.-_]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+			{ "^/users\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/users\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/users\/([A-Za-z0-9.-_]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"tags": [
-			{ "^/tags$" : [ "GET", "DELETE" ] },
-			{ "^\/tags\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
-			{ "^\/tags\/([A-Za-z0-9-]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+			{ "^/tags\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/tags\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"status": [
-			{ "^\/status$" : [ "GET", "DELETE" ] },
-			{ "^\/status\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+			{ "^\/status\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/status\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		]
 	},
 	"db": {
