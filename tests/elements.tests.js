@@ -1,10 +1,9 @@
 var assert = require ( 'assert' );
 
-module.exports = function ( conf, model, handler ) {
+module.exports = function ( model, handler ) {
 	console.log ( "-- > Elements." );
 	
-	var timeout = 1000
-	  , testElement = {
+	var testElement = {
 		id : 666,
 		ele_name : "Testing element",
 		ele_content : "Testing element content."
