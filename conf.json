@@ -3,6 +3,9 @@
 		"address": "127.0.0.1",
 		"port": 1337
 	},
+	"orm" : {
+		"logging_for_debug": false
+	},
 	"resources" : {
 		"elements": [
 			{ "^\/elements$" : ["GET", "DELETE"] },
