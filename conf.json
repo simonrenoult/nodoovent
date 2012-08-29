@@ -15,6 +15,11 @@
 			{ "^/users$" : [ "GET", "DELETE" ] },
 			{ "^\/users\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
 			{ "^\/users\/([A-Za-z0-9.-_]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
+		],
+		"tags": [
+			{ "^/tags$" : [ "GET", "DELETE" ] },
+			{ "^\/tags\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
+			{ "^\/tags\/([A-Za-z0-9-]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
 		]
 	},
 	"db": {
