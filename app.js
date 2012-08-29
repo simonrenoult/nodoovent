@@ -7,7 +7,9 @@ var Sequelize = require ( 'sequelize' )
   , models = require ( './lib/models' )
   , handler = require ( './lib/handler' )
   , router = require ( './lib/routes' )
-  , server = require ( './lib/server.js' );
+  , server = require ( './lib/server.js' )
+  , test = require ( './tests' ).isRequired ( );
+
 
 /**
  * Connect the orm module to the database.
@@ -19,18 +21,11 @@ var Sequelize = require ( 'sequelize' )
  */
 models.connectOrm ( conf, Sequelize, function ( sequelize ) {
     var modelsObject = models.initialize ( sequelize );
-    
-    var testSession = false;
-    for ( var i = 0 ; i < process.argv.length ; i++ ) {
-    	if ( process.argv[i] === '--test' || process.argv[i] === '-t' ) {
-    		testSession = true;
-    	}
-    }
 
     console.log ( 'API running at http://'
             + conf.api.address + ':' + conf.api.port + '.' );
             
-    if ( !testSession ) {
+    if ( !test ) {
 		// Create an instance of the HTTP server.
 		server.create ( conf.api, function ( req, res ) {
 		    // Execute the router function each time the server is requested.
@@ -39,12 +34,8 @@ models.connectOrm ( conf, Sequelize, function ( sequelize ) {
 		    } );
 		} );
 	} else {
-		// Wait 500ms to be sure the shell is free.
-		setTimeout ( function ( ) {
-			console.log ( "\nTesting session is processing..." );
-			// Start tests.
-			require ( __dirname + '/tests/elements.tests.js' ) ( conf, modelsObject.elements, handler );
-		}, 500 );
+		console.log ( "\nTesting session is processing." );
+		require ( __dirname + '/tests/elements.tests.js' ) ( conf, modelsObject.elements, handler );
 	}
 	
 } );
