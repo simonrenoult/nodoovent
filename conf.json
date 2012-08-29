@@ -8,18 +8,13 @@
 	},
 	"resources" : {
 		"elements": [
-			{ "^\/elements$" : ["GET", "DELETE"] },
+			{ "^\/elements$" : [ "GET", "DELETE" ] },
 			{ "^\/elements\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
 		],
-		"authors": [
-			"^/authors$",
-			"^\/authors\/([0-9]+)$",
-			"^\/authors\/([A-Za-z0-9.-_]+)$"
-		],
-		"tags": [
-			"^/tags$",
-			"^\/tags\/([0-9]+)$",
-			"^\/tags\/([A-Za-z0-9.-_]+)$"
+		"users": [
+			{ "^/users$" : [ "GET", "DELETE" ] },
+			{ "^\/users\/([0-9]+)$" : [ "GET", "DELETE", "POST", "PUT"] },
+			{ "^\/users\/([A-Za-z0-9.-_]+)$" : [ "GET", "DELETE", "POST", "PUT"] }
 		]
 	},
 	"db": {

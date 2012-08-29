@@ -36,6 +36,8 @@ models.connectOrm ( conf, Sequelize, function ( sequelize ) {
 	} else {
 		console.log ( "\nTesting session is processing." );
 		require ( __dirname + '/tests/elements.tests.js' ) ( conf, modelsObject.elements, handler );
+		require ( __dirname + '/tests/users.tests.js' ) ( conf, modelsObject.users, handler );
+		console.log ( "Testing session is done. Everything's fine." );
 	}
 	
 } );

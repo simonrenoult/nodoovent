@@ -1,7 +1,7 @@
 var assert = require ( 'assert' );
 
 module.exports = function ( conf, model, handler ) {
-	console.log ( "\nTesting elements." );
+	console.log ( "-- > Elements." );
 	
 	var timeout = 1000
 	  , testElement = {
@@ -12,7 +12,7 @@ module.exports = function ( conf, model, handler ) {
 
 	// Try to read a non-existent element.
 	handler.findOneByID ( model, testElement.id, function ( results ) {
-		assert.equal ( results.message.content, null, "This testing item already exist within the database." );
+		assert.equal ( results.message.content, null, "This tuple already exists within the database." );
 	} );
 
 	// Create a new element in the database.
@@ -21,11 +21,11 @@ module.exports = function ( conf, model, handler ) {
 
 	// Read the previously created element.
 	handler.findOneByID ( model, testElement.id, function ( results ) {
-		assert.equal ( results.message.content.id, testElement.id, "This testing item can't be find." );
+		assert.equal ( results.message.content.id, testElement.id, "This tuple can't be find." );
 	} );
 
 	// Update the previously read element.
-	handler.updateOneByID ( false, model, testElement.id, function ( results) {
+	handler.updateOneByID ( false, model, testElement.id, function ( results ) {
 		
 		// Read the previously updated element.
 		handler.findOneByID ( model, testElement.id, function ( results ) {
