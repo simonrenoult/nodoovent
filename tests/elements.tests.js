@@ -1,14 +1,14 @@
 var assert = require ( 'assert' );
 
 module.exports = function ( conf, model, handler ) {
+	console.log ( "\nTesting elements." );
+	
 	var timeout = 1000
 	  , testElement = {
 		id : 666,
 		ele_name : "Testing element",
 		ele_content : "Testing element content."
 	};
-
-	console.log ( "\nTesting elements." );
 
 	// Try to read a non-existent element.
 	handler.findOneByID ( model, testElement.id, function ( results ) {
