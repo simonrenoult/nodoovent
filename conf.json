@@ -9,21 +9,35 @@
 	"resources" : {
 		"elements": [
 			{ "^\/elements\/?$" : [ "GET", "DELETE", "POST" ] },
-			{ "^\/elements\/([0-9]+)$" : [ "GET", "DELETE", "PUT"] }
+			{ "^\/elements\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/users\/elements\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/users\/([0-9]+)\/elements\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/users\/([A-Za-z0-9.-_]+)\/elements\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/tags\/elements\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/tags\/([0-9]+)\/elements\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/tags\/([A-Za-z0-9-]+)\/elements\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/status\/elements\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/status\/([0-9]+)\/elements\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"users": [
-			{ "^/users\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/users\/?$" : [ "GET", "DELETE", "POST" ] },
 			{ "^\/users\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
-			{ "^\/users\/([A-Za-z0-9.-_]+)\/?$" : [ "GET", "DELETE", "PUT"] }
+			{ "^\/users\/([A-Za-z0-9.-_]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/elements\/users\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/elements\/([0-9]+)\/users\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"tags": [
-			{ "^/tags\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
 			{ "^\/tags\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
-			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET", "DELETE", "PUT"] }
+			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/elements\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/elements\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"status": [
 			{ "^\/status\/?$" : [ "GET", "DELETE", "POST" ] },
-			{ "^\/status\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] }
+			{ "^\/status\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/elements\/status\/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/elements\/([0-9]+)\/status\/?$" : [ "GET", "DELETE", "PUT"] }
 		]
 	},
 	"db": {

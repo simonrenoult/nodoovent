@@ -1,3 +1,6 @@
+/*
+ * Check whether the test argument has been passed or not.
+ */
 exports.isRequired = function ( ) {
 	// To start an api testing session, start the app with -t or --test argument.
 	for ( var i = 0 ; i < process.argv.length ; i++ ) {
