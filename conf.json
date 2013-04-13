@@ -27,9 +27,9 @@
 			{ "^\/elements\/([0-9]+)\/users\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"tags": [
-			{ "^\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
-			{ "^\/tags\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
-			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/tags\/?$" : [ "GET", "POST" ] },
+			{ "^\/tags\/([0-9]+)\/?$" : [ "GET" ] },
+			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET" ] },
 			{ "^\/elements\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
 			{ "^\/elements\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
