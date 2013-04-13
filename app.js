@@ -39,5 +39,8 @@ models.connectOrm ( conf, Sequelize, function ( sequelize ) {
 		require ( __dirname + '/tests/users.tests.js' ) ( modelsObject.users, handler );
 		require ( __dirname + '/tests/tags.tests.js' ) ( modelsObject.tags, handler );
 		require ( __dirname + '/tests/status.tests.js' ) ( modelsObject.status, handler );
+        require ( __dirname + '/tests/comments.tests.js' ) ( modelsObject.comments, handler );
+        require ( __dirname + '/tests/groups.tests.js' ) ( modelsObject.groups, handler );
+        require ( __dirname + '/tests/privacies.tests.js' ) ( modelsObject.privacies, handler );
 	}
 } );
