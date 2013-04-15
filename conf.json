@@ -27,9 +27,9 @@
 			{ "^\/elements\/([0-9]+)\/users\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
 		"tags": [
-			{ "^\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
-			{ "^\/tags\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
-			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/tags\/?$" : [ "GET", "POST" ] },
+			{ "^\/tags\/([0-9]+)\/?$" : [ "GET" ] },
+			{ "^\/tags\/([A-Za-z0-9-]+)\/?$" : [ "GET" ] },
 			{ "^\/elements\/tags\/?$" : [ "GET", "DELETE", "POST" ] },
 			{ "^\/elements\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] }
 		],
@@ -38,6 +38,20 @@
 			{ "^\/status\/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
 			{ "^\/elements\/status\/?$" : [ "GET", "DELETE", "POST" ] },
 			{ "^\/elements\/([0-9]+)\/status\/?$" : [ "GET", "DELETE", "PUT"] }
+		],
+        "comments": [
+			{ "^/comments/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/comments/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/comments/([A-Za-z0-9.-_]+)\/?$" : [ "GET", "DELETE", "PUT"] }
+        ],
+        "groups": [
+			{ "^/groups/?$" : [ "GET", "DELETE", "POST" ] },
+			{ "^\/groups/([0-9]+)\/?$" : [ "GET", "DELETE", "PUT"] },
+			{ "^\/groups/([A-Za-z0-9.-_]+)\/?$" : [ "GET", "DELETE", "PUT"] }
+                ],
+		"privacies": [
+			{ "^\/privacies/?$" : [ "GET" ] },
+			{ "^\/privacies/([0-9]+)\/?$" : [ "GET" ] }
 		]
 	},
 	"db": {
