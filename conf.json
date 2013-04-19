@@ -1,0 +1,36 @@
+﻿{
+  "api": {
+    "address": "127.0.0.1",
+    "port": 1337
+  },
+  "args": {
+    "test": {
+      "default": false
+    },
+    "logging": {
+      "default": false
+    },
+    "dbLocation": {
+      "default": "local"
+    }
+  },
+  "db": {
+    "encoding": "utf8",
+    "local": {
+      "host": "127.0.0.1",
+      "port": 3306,
+      "type": "mysql",
+      "user": "nodoovent",
+      "password": "nodoovent",
+      "name": "nodoovent"
+    },
+    "remote": {
+      "host": "simon-renoult.com",
+      "port": 3306,
+      "type": "mysql",
+      "user": "simonren_ndvnt",
+      "password": "nodoovent",
+      "name": "simonren_nodoovent"
+    }
+  }
+}

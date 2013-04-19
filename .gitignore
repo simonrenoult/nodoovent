@@ -1,0 +1,10 @@
+# Temporary file directory
+tmp/
+*~
+.projects
+.project
+.settings
+*.geany
+docs
+nbproject/
+node_modules
